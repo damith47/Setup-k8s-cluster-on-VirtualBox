@@ -1,0 +1,17 @@
+✅ Download Ubuntu 24.04 LTS "Noble Numbat" (pure CLI/server)
+👉 https://releases.ubuntu.com/24.04/ubuntu-24.04-live-server-amd64.iso
+
+✅ Install ISO in VirtualBox (2 vms for master node and worker node)
+
+✅Use Host-Only Networking for Both VMs
+This ensures Windows host (Jenkins) can talk to the Kubernetes cluster VMs.
+
+For each VM (master-node and worker-node):
+
+1. Go to Settings → Network
+2. Adapter 1: Leave as NAT (for internet)
+3. Adapter 2:
+    - Enable
+    - Attached to: Host-only Adapter
+    - Name: VirtualBox Host-Only Ethernet Adapter
+    - Click OK
